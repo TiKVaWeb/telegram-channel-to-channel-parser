@@ -1,4 +1,4 @@
-# Telegram simple post's parser
+# Telegram post's scraper
 Telegram Parser is a Python script designed to automatically forward messages from one or more Telegram channels to a different channel. It allows you to automatically gather news or updates from various sources and publish them in your Telegram channel.
 
 ## Content

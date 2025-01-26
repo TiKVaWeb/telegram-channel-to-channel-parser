@@ -8,9 +8,11 @@ Telegram Parser is a Python script designed to automatically forward messages fr
 - [Contacts](#Contacts)
 
 ## Technologies
-- [Python 3.9+](https://www.python.org/)
-- [Telethon](https://docs.telethon.dev/en/stable/)
-
+- **[Python 3.9+](https://www.python.org/)**
+- **[Telethon](https://docs.telethon.dev/en/stable/)**
+- **[ahocorasick](https://pypi.org/project/pyahocorasick/)**
+- **[re](https://docs.python.org/3/library/re.html)**
+  
 ## Usage
 The script forwards messages from specified Telegram channels to a specified target channel, hiding the source of the messages.
 
@@ -19,14 +21,18 @@ The script forwards messages from specified Telegram channels to a specified tar
 2. Subscribe to the channels from which you want to parse messages.
 3. Add your account to the channel where messages will be sent, with publishing rights.
 
+If you are using a [KeywordTelegramForwarder.py](https://github.com/TiKVaWeb/telegram-keyword-filter-forwarder/blob/main/KeywordTelegramForwarder.py):
+1.  **Define your keywords:**  Edit the `keywords` list in the script to include words relevant to the content you want to forward.
+2.  **Case-insensitive search:** Keyword matching is case-insensitive, meaning "Keyword", "keywords", and "KEYWORD" will all be matched.
+
 ## Installation and launch
 1. Install dependencies:
-   `pip install telethon`
-2. Set up the script:
+   `pip install telethon pyahocorasick`
+3. Set up the script:
    * Provide your API data: api_id, api_hash and phone number.
    * Add links to source channels in source_channels.
    * Specify the target channel in target_channel.
-3. Run the script:
+4. Run the script:
    `python script.py`
 
 ## Contacts

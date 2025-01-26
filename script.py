@@ -14,7 +14,7 @@ client = TelegramClient('session_name', api_id, api_hash)
 async def main():
     await client.start(phone=lambda: input('telegram_code: '))
 
-    # Получаем entity целевого канала
+    # We get the entity of the target channel
     target = await client.get_entity(target_channel)
 
     @client.on(events.NewMessage(chats=source_channels))
